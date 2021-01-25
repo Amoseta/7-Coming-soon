@@ -1,0 +1,36 @@
+/* div {
+    display: inline-block;
+    width: 1000px;
+    padding: 40px;
+    background-color: antiquewhite; 
+    margin: 100px calc(50%-500px);
+}
+
+
+@media(max-width: 900px) {
+    div {
+        width: 600px;
+        margin: 100px calc(50%-300px); 
+        background-color: aqua;
+}
+
+@media(max-width: 800px) {
+    div {
+        width: 500px;
+        margin: 100px calc(50%-200px); 
+        background-color: red;
+}
+
+
+
+
+
+
+
+// margin: 40px 0;
+*/
+.container {
+    display: inline-block;
+    
+}
+
