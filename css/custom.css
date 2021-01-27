@@ -41,12 +41,11 @@
     margin-bottom: 60px;
 }
 
-.hero .form {
+.hero form {
     margin-bottom: 20px;
 }
 
 .hero .mouse {
-    line-height: 10px;
 }
 /* main content section */
 
@@ -70,14 +69,15 @@ main .block-title {
 
 main .block-description {
     margin-bottom: 30px;
-    font-size: ;
+    font-size: 18px;
 }
 
-main .block-title > a {
+main .block-description > a {
     color: #EA1E63;
+    text-decoration: none;
 }
 
-main .block-title > a:hover {
+main .block-description > a:hover {
     text-decoration: underline;
 }
 
@@ -98,7 +98,7 @@ main .block-title > a:hover {
 
 /* footer section */
 
-footer > .container {
+footer .container {
     text-align: center;
     line-height: 30px;
     color: #fff9;
@@ -107,7 +107,6 @@ footer > .container {
 .container > .socials {
     padding: 15px 0;
     border-bottom: 2px solid #fff;
-    text-align: center;
 }
 
 .socials > .fa {
@@ -132,14 +131,14 @@ footer a {
 .short-row > .footer-logo {
     height: 40px;
     margin: 30px 0;
-    text-align: center;
 }
 
 .bottom-texts {
     display: flex;
+    width: 100%;
     flex-direction: row;
     justify-content: center;
-    gap: 20px 0;
+    gap: 0 20px;
     
 }
 
@@ -154,7 +153,7 @@ footer a {
     height: 18px;
     background-color: #fff;
     position: absolute;
-    top: 0;
+    top: 50%;
     left: -11px;
     transform: translateY(-50%);
 }
