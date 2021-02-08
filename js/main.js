@@ -1,1 +1,4 @@
-console.log('Coming soon...');
+import { clock } from './components/clock.js';
+
+clock('.clock');
+
