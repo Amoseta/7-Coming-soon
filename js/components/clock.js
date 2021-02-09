@@ -1,8 +1,28 @@
-function clock(selector) {
+function clock(selector, deadline) {
+    // input validation
+    if (typeof selector !== 'string' ||
+        selector === '') {
+        console.error('ERROR: netinkamo formato selektorius.');
+        return false;
+    }
+    if (typeof deadline !== 'string' ||
+        deadline === '' ||
+        !isFinite((new Date(`2000-${deadline}`)).getTime())) {
+        console.error('ERROR: netinkamo formato deadline.');
+        return false;
+    }
+
+    // logic
+
     const DOM = document.querySelector(selector);
+    if (!DOM) {
+        console.error('ERROR: pagal pateikta selektoriu nepavyko rsti DOM elemento.');
+        return false;
+    }
+
+
     let allValuesDOM = null;
-    const deadLine = '01-04 14:00:00';;
-    let numbers = calcTime(deadLine);
+    let numbers = calcTime(deadline);
     const labels = ['days', 'hours', 'minutes', 'seconds'];
     let HTML = '';
 
@@ -20,7 +40,7 @@ function clock(selector) {
 
 
     setInterval(function () {
-        numbers = calcTime(deadLine);
+        numbers = calcTime(deadline);
         for (let i= 0; i < 4; i++) {
             allValuesDOM[i].innerText = numberFormat(numbers[i]);
         }
@@ -35,17 +55,17 @@ function numberFormat(number) {
     return number;
 }
 
-function calcTime(deadLine) {
+function calcTime(deadline) {
     const date = new Date();
     const now = Date.now();
     let year = date.getFullYear();
-    let fullDeadline = `${year}-${deadLine}`;
+    let fullDeadline = `${year}-${deadline}`;
     let fullDeadlineInMiliseconds = (new Date(fullDeadline)).getTime();
 
      
     if (fullDeadlineInMiliseconds < now) {
         year++;
-        fullDeadline = `${year}-${deadLine}`; 
+        fullDeadline = `${year}-${deadline}`; 
         fullDeadlineInMiliseconds = (new Date(fullDeadline)).getTime();
     }
 
