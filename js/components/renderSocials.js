@@ -1,3 +1,5 @@
+import { allowedSocialIcons } from "../data/allowedSocialIcons.js";
+
 function renderSocials(selector, data) {
     // input validation
     if (typeof selector !== 'string' ||
@@ -28,7 +30,8 @@ function renderSocials(selector, data) {
             !socialObject.href ||
             typeof socialObject.href !== 'string' ||
             !socialObject.icon ||
-            typeof socialObject.icon !== 'string') {
+            typeof socialObject.icon !== 'string' ||
+            !allowedSocialIcons.includes(socialObject.icon)) {
             console.warn('WARNING: netinkamo formato objektas', socialObject);
             continue;
        }
