@@ -1,0 +1,47 @@
+.mouse {
+    display: inline-block;
+    width: 20px;
+    height: 30px;
+    border: 3px solid #fff;
+    border-radius: 10px;
+    text-align: center;
+}
+
+.mouse > .wheel {
+    display: inline-block;
+    width: 3px;
+    height: 6px;
+    margin-top: 4px;
+    background-color: #fff;
+    /* background-image: url();
+    background size: contain; */
+    animation-name: mouseMove;
+    animation-duration: 1.3s;
+    animation-iteration-count: infinite;
+    /* animation-timing-function: ease;
+    animation-delay: 1s;
+    animation-fill-mode: backwards;
+    animation-direction: normal;
+    animation-play-state: running;*/
+}
+
+/*.mouse:hover > .wheel {
+    animation-play-state: paused;
+}*/
+
+
+@keyframes mouseMove {
+    0% {
+        margin-top: 4px;
+        opacity: 1;
+        /* transform: rotate(80deg)*/
+    }
+    50% {
+        opacity: 1;
+    }
+    100% {
+        margin-top: 12px;
+        opacity: 0;
+        /* transform: rotate(720deg)*/
+    }
+}
