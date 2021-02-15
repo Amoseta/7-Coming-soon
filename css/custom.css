@@ -3,8 +3,8 @@
 
 
 /* basic style*/
-.bg-blue {
-    background-color: #03A9F3;
+.bg-main {
+    background-color: var(--main-color);
 }
 
 /* Hero section */
