@@ -43,7 +43,7 @@ class ProgressBar {
                         <div class="value">${progressBar.value}%</div>
                     </div>
                     <div class="bar">
-                        <div class="progress"></div>
+                        <div class="progress" style="width: ${progressBar.value}%;"></div>
                     </div>
                 </div>`;
 
