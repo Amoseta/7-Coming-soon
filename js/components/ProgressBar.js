@@ -10,7 +10,8 @@ class ProgressBar {
     }
 
     init() {
-        if (!this.isValidSelector()) {
+        if (!this.isValidSelector() ||
+            !this.isValidData()) {
             return false;
         }
 
@@ -35,12 +36,36 @@ class ProgressBar {
         return true
     }
 
+    isValidData () {
+        if (!Array.isArray(this.data)) {
+            return false;
+        }
+        return true;
+    }
+
+    isValidProgressBar(progressBar) {
+        if (typeof progressBar !== 'object' ||
+            Array.isArray(progressBar) ||
+            progressBar === null ||
+            !progressBar.label ||
+            typeof progressBar.label !=='string' ||
+            progressBar.label.trim() === '' ||
+            typeof progressBar.value !== 'number' ||
+            !isFinite(progressBar.value) ||
+            progressBar.value > 100 ||
+            progressBar.value < 0) {
+            console.warn('WARNING: netinkamo formato objektas ', progressBar);
+            return false;
+        }
+        return true;
+    }
+    
     generateProgressBar(progressBar){
         console.log(progressBar);
         return `<div class="progress-bar">
                     <div class="texts">
                         <div class="label">${progressBar.label}</div>
-                        <div class="value">${progressBar.value}%</div>
+                        <div class="value">${this.formatNumber(progressBar.value)}%</div>
                     </div>
                     <div class="bar">
                         <div class="progress" style="width: ${progressBar.value}%;">
@@ -50,12 +75,24 @@ class ProgressBar {
                 </div>`;
 
     }
+    
+    formatNumber(number) {
+        return Math.round(number);
+    } 
 
     render() {
         let HTML = '';
 
         for (const progress of this.data) {
+            if (!this.isValidProgressBar(progress)) {
+                continue;
+            }
             HTML += this.generateProgressBar(progress);
+        }
+
+        if (HTML === '') {
+            console.warn('WARNING: this.data neturi ne vieno validaus objekto.');
+            return false;
         }
 
         this.DOM.innerHTML += HTML;
