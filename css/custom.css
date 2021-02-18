@@ -3,8 +3,8 @@
 
 
 /* basic style*/
-.bg-blue {
-    background-color: #03A9F3;
+.bg-main {
+    background-color: var(--main-color);
 }
 
 /* Hero section */
@@ -27,6 +27,7 @@
     text-transform: uppercase;
     font-size: 50px;
     line-height: 50px;
+    color: #fff;
 }
 .hero .subtitle {
     display: inline-block;
@@ -41,8 +42,17 @@
     margin-bottom: 60px;
 }
 
-.hero form {
+.hero .form {
     margin-bottom: 20px;
+}
+
+.hero .form > input {
+    color: #fff;
+    border-bottom-color: #fff;
+}
+
+.hero .form > input::placeholder {
+    color: #fff;
 }
 
 .hero .mouse {
@@ -73,12 +83,25 @@ main .block-description {
 }
 
 main .block-description > a {
-    color: #EA1E63;
+    color: var(--secondary-color);
     text-decoration: none;
 }
 
 main .block-description > a:hover {
     text-decoration: underline;
+}
+.right-column .form button {
+    float: right;
+}
+
+@media (min-width: 1100px) {
+    .right-column .form > input {
+        width: calc(50% - 10px);
+        float: left;
+    }
+    .right-column .form > input:first-of-type {
+        margin-right: 20px;
+    }
 }
 
 @media (max-width: 900px) {

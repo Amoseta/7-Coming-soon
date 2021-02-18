@@ -20,7 +20,7 @@
     <link rel="stylesheet" href="./css/custom.css">
 </head>
 <body>
-    <section class="container hero bg-blue">
+    <section class="container hero bg-main">
        <div class="short-row">
            <img class="logo" src="./img/logo.png" alt="logo">
            <h1 class="title">Coming soon</h1>
@@ -28,11 +28,12 @@
            <div class="clock">
                 CLOCK
            </div>
-           <form >
-               SUBSCRIBE FORM
-           </form>
+           <form class="form">
+            <input data-validation-rule="email-address" type="email" placeholder="Type your email" required>
+            <button class="btn" type="submit">Subscribe now</button>
+        </form>
            <div class="mouse">
-               MOUSE
+               <div class="wheel"></div>
            </div>
        </div>
     </section>
@@ -43,39 +44,26 @@
                 <p class="block-description">Lorem, ipsum dolor sit amet consectetur adipisicing elit. 
                 Perspiciatis odit molestiae doloremque voluptatibus et quos 
                 provident <a href="#">Matrox</a> mollitia autem praesentium.</p>
-                <div class="progress-bar">
-                    PROGRESS BAR
-                </div>
-                <div class="progress-bar">
-                    PROGRESS BAR
-                </div>
-                <div class="progress-bar">
-                    PROGRESS BAR
-                </div>
-           </div>
+                <!-- <div class="progress-bar">PROGRESS BAR</div> -->
+            </div>
            <div class="right-column">
                 <h2 class="block-title">Have any question?</h2>
                 <p class="block-description">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Perspiciatis 
                 odit molestiae doloremque voluptatibus et quos provident 
                 quidem <a href="mailto:24-grupe@programuotojai.xyz">24&#8209grupe@programuotojai.xyz</a> autem praesentium.</p>
-                <form >
-                    message form
+                <form class="form">
+                    <input data-validation-rule="first-name" type="text" placeholder=Name required>
+                    <input data-validation-rule="email-address" type="email" placeholder=Email required>
+                    <textarea data-validation-rule="text" placeholder="Message" required></textarea>
+                    <button class="btn" type="submit">Send message</button>
                 </form>
             </div>
        </div>
        </div>
     </main>
 
-    <footer class ="container bg-blue">
-        <div class = "row socials">
-            <a href="#" target="_blank" class="fa fa-facebook"></a>
-            <a href="#" target="_blank" class="fa fa-twitter"></a>
-            <a href="#" target="_blank" class="fa fa-dribbble"></a>
-            <a href="#" target="_blank" class="fa fa-tumblr"></a>
-            <a href="#" target="_blank" class="fa fa-linkedin"></a>
-            <a href="#" target="_blank" class="fa fa-instagram"></a>
-            <a href="#" target="_blank" class="fa fa-rss"></a>
-        </div>
+    <footer class ="container bg-main">
+        <div class = "row socials"></div>
         <div class ="short-row">
             <img class="footer-logo" src="./img/logo-white.png" alt="Footer logo">
             <div class="bottom-texts">
@@ -88,6 +76,6 @@
     </footer>
 
 
-    <script src="./js/main.js"></script>
+    <script src="./js/main.js" type="module"></script>
 </body>
 </html>
