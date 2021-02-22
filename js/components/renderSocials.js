@@ -36,7 +36,7 @@ function renderSocials(selector, data) {
             continue;
        }
 
-       HTML += `<a href="${socialObject.href}" target="_blank" class="fa fa-${socialObject.icon}"></a>`;
+       HTML += `<a href="${socialObject.href}" target="_blank" class="fa fa-${socialObject.icon}" rel="norefferer noopener"></a>`;
   
    }
 

@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Lets make website great again">
     <title>Coming soon</title>
     <link rel="shortcut icon" href="./img/favicon.png" type="image/png">
     <!--font-->
@@ -28,13 +29,12 @@
        <div class="short-row">
            <img class="logo" src="./img/logo.png" alt="logo">
            <h1 class="title">Coming soon</h1>
-           <p class="subtitle">Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia molestiae illum ea ad perferendis. Amet enim aliquam, ipsum veniam doloribus provident, consequuntur reiciendis fuga atque quis itaque delectus mollitia est?</p>
-           <div class="clock">
-                CLOCK
-           </div>
+           <p class="subtitle">Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia molestiae illum ea ad perferendis. Amet enim aliquam, ipsum veniam doloribus provident, consequuntur reiciendis fuga atque</p>
+           <div class="clock"></div>
            <form class="form">
-            <input data-validation-rule="email-address" type="email" placeholder="Type your email" required>
-            <button class="btn" type="submit">Subscribe now</button>
+                <label for="name">Name</label>
+                <input id="name" data-validation-rule="email-address" type="email" placeholder="Type your email" required>
+                <button class="btn" type="submit">Subscribe now</button>
         </form>
            <div class="mouse">
                <div class="wheel"></div>
@@ -56,9 +56,12 @@
                 odit molestiae doloremque voluptatibus et quos provident 
                 quidem <a href="mailto:24-grupe@programuotojai.xyz">24&#8209grupe@programuotojai.xyz</a> autem praesentium.</p>
                 <form class="form">
-                    <input data-validation-rule="first-name" type="text" placeholder=Name required>
-                    <input data-validation-rule="email-address" type="email" placeholder=Email required>
-                    <textarea data-validation-rule="text" placeholder="Message" required></textarea>
+                    <label for="msg-name">Name</label>
+                    <input id="msg-name" data-validation-rule="first-name" type="text" placeholder=Name required>
+                    <label for="msg-email">Email</label>
+                    <input id="msg-email" data-validation-rule="email-address" type="email" placeholder=Email required>
+                    <label for="msg-text">Text</label>
+                    <textarea id="msg-text" data-validation-rule="text" placeholder="Message" required></textarea>
                     <button class="btn" type="submit">Send message</button>
                 </form>
             </div>
