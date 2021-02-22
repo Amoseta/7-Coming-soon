@@ -79,7 +79,9 @@ main .block-title {
 
 main .block-description {
     margin-bottom: 30px;
-    font-size: 18px;
+    font-size: 16px;
+    line-height: 24px;
+    text-align: left;
 }
 
 main .block-description > a {
