@@ -126,12 +126,23 @@ main .block-description > a:hover {
 
 /* footer section */
 
-footer .container {
+footer.container {
     text-align: center;
     line-height: 30px;
     color: #fff9;
     padding-top: 0;
 }
+
+.container > .back-to-top {
+    position: relative;
+}
+
+.container > .back-to-top > .btn {
+    position: absolute;
+    top: -24px;
+    right: -10px;
+}
+
 .container > .socials {
     padding: 15px 0;
     border-bottom: 2px solid #fff;
@@ -204,7 +215,10 @@ footer > .short-row > p {
     width: 100%;
 }
 
-@media (max-width: 700px) {
+@media (max-width: 680px) {
+    .container > .back-to-top {
+        display: none;
+    }
     .bottom-texts {
         flex-direction: column;
     }
