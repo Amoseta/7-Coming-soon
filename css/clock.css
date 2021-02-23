@@ -2,6 +2,7 @@
     display: inline-block;
     width: 100%;
     color: #fff;
+    font-weight: bold;
 }
 
 .clock > .time {
@@ -14,8 +15,9 @@
     line-height: 60px;
 }
 .clock > .time > .label {
-    font-size: 15px;
-    line-height: 15px;
+    margin-top: 10px;
+    font-size: 17px;
+    line-height: 17px;
     text-transform: uppercase;
 }
 

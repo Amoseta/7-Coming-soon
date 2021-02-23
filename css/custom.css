@@ -10,8 +10,13 @@
 /* Hero section */
 
 .hero {
+    min-height: 100vh;
     text-align: center;
     padding-bottom: 30px;
+    background-image: url(../img/background.jpg);
+    background-size: cover;
+    background-position: center bottom;
+    background-attachment: fixed;
 }
 
 .hero .logo {
@@ -55,8 +60,6 @@
     color: #fff;
 }
 
-.hero .mouse {
-}
 /* main content section */
 
 
@@ -79,7 +82,9 @@ main .block-title {
 
 main .block-description {
     margin-bottom: 30px;
-    font-size: 18px;
+    font-size: 16px;
+    line-height: 24px;
+    text-align: left;
 }
 
 main .block-description > a {
@@ -121,12 +126,23 @@ main .block-description > a:hover {
 
 /* footer section */
 
-footer .container {
+footer.container {
     text-align: center;
     line-height: 30px;
     color: #fff9;
     padding-top: 0;
 }
+
+.container > .back-to-top {
+    position: relative;
+}
+
+.container > .back-to-top > .btn {
+    position: absolute;
+    top: -24px;
+    right: -10px;
+}
+
 .container > .socials {
     padding: 15px 0;
     border-bottom: 2px solid #fff;
@@ -134,12 +150,18 @@ footer .container {
 
 .socials > .fa {
     width: 40px;
+    height: 40px;
     line-height: 40px;
-    font-size: 20px;
+    font-size: 0;
     color: #fff;
     border-radius: 50%;
     transition: all 0.3s;
 }
+
+.socials > .fa::before {
+    font-size: 20px;
+}
+
 .socials > .fa:hover {
     background-color: #fff;
     color: #03a9f4;
@@ -193,7 +215,10 @@ footer > .short-row > p {
     width: 100%;
 }
 
-@media (max-width: 700px) {
+@media (max-width: 680px) {
+    .container > .back-to-top {
+        display: none;
+    }
     .bottom-texts {
         flex-direction: column;
     }

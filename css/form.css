@@ -3,6 +3,12 @@
     width: 100%;
 }
 
+.form > label {
+    display: inline-block;
+    float: left;
+    font-size: 0;
+}
+
 .form > input, 
 .form > textarea {
     display: inline-block;
